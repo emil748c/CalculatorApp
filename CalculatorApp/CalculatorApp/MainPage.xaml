@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="CalculatorApp.MainPage">
     <ContentPage.Content>
-        <Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
+        <StackLayout>
+        <Grid Padding="5,0" VerticalOptions="FillAndExpand" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
@@ -43,6 +44,9 @@
             <Button Grid.Column="0" Grid.Row="5" Clicked="OnClear" Style="{StaticResource clearButton}" Text="C" />
             <Button Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="5" Clicked="OnCalculate" Style="{StaticResource moderatorButton}" Text="="/>
         </Grid>
+
+            <Button x:Name="nextPage" Clicked="OnNextPageButtonClicked"  Text="Næste side"></Button>
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>
